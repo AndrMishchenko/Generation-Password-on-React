@@ -49,7 +49,7 @@
   transform: rotate(90deg);
 }
 
-@keyframes first{
+/*@keyframes first{
   0%{
     transform: rotate(0deg);
   }
@@ -64,7 +64,7 @@
   100%{
     transform: rotate(450deg);
   }
-}
+}*/
 
 .hello-title{
   width: 90%;
@@ -82,9 +82,10 @@
   transition: all 1s;
 }
 
-.register{
+.register,
+.login{
   width: 90%;
-  height: 350px;
+  height: 370px;
   z-index: 200;
   display: flex;
   align-items: center;
@@ -92,9 +93,26 @@
   flex-direction: column;
 }
 
+form{
+  height: 310px;
+}
+
+.register-block,
+.login-block
+{
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content:flex-end;
+  flex-direction: column;
+}
+
 .register-email,
 .register-pass,
-.register-name{
+.register-name,
+.login-email,
+.login-pass{
   width: 100%;
   height: 40px;
   font-size: 30px;
@@ -102,12 +120,38 @@
   border: none;
   outline: none;
   color: rgb(48, 45, 45);
-  margin-bottom: 30px;
   border-radius: 20px;
   background-color: antiquewhite;
 }
 
-.register-btn{
+.register-block-btn,
+.login-block-btn{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-reg{
+  background-image: url(./img/1.png);
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10px;
+}
+
+.back-log{
+  background-image: url(./img/1.png);
+  height: 35px;
+  width: 35px;
+  background-size: cover;
+  background-position: center;
+}
+
+.register-btn,
+.login-btn{
   width: 150px;
   height: 50px;
   border: none;
@@ -116,5 +160,38 @@
   font-size: 30px;
   color: rgb(56, 51, 51);
   background-color: burlywood;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
+.register-block-error{
+  color: rgb(255, 60, 0);
+  font-size: 12px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.login-error-block{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-error-block-text{
+  color: rgb(255, 60, 0);
+}
+
+button{
+  z-index: 100;
+}
+
+.login-box{
+  width: 90%;
+  height: 300px;
+}
